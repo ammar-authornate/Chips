@@ -1,11 +1,14 @@
+@font-face {
+  font-family: 'Tofino';
+  src: url('/assets/fonts/tofino/TofinoWide-MediumPersonal.otf') format('truetype');
+  font-style: normal;
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Tofino'
 }
-
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +16,15 @@ a {
 
 * {
   box-sizing: border-box;
+}
+input,
+input::placeholder {
+  font-weight: 800;
+  font-size: 37px;
+  line-height: 71px;
+  text-transform: uppercase;
+}
+input{
+  border: 1px solid #FFFFFF;
+
 }
