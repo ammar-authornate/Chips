@@ -121,9 +121,11 @@ export default function Home() {
                   textAlign: 'center',
                   justifyContent: 'center',
                   marginTop: '6rem',
+                  width: '100%',
                 }}
               >
                 <InputBox
+                  style={{ width: '40%' }}
                   type='password'
                   placeholder='PASSWORD'
                   value={input.password}
