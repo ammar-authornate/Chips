@@ -1,13 +1,14 @@
 @font-face {
   font-family: 'Tofino';
-  src: url('/assets/fonts/tofino/TofinoWide-MediumPersonal.otf') format('truetype');
+  src: url('/assets/fonts/tofino/TofinoWide-MediumPersonal.otf')
+    format('truetype');
   font-style: normal;
 }
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Tofino'
+  font-family: 'Tofino';
 }
 a {
   color: inherit;
@@ -23,8 +24,28 @@ input::placeholder {
   font-size: 37px;
   line-height: 71px;
   text-transform: uppercase;
-}
-input{
-  border: 1px solid #FFFFFF;
+  background-color: transparent;
+  padding-right: 20px;
+  padding-left: 10px;
 
+}
+input {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+button {
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 20%;
+  height: 101px;
+  background: '#FFFFFF';
+  cursor: pointer;
+  border: none;
+  color: '##012743';
+  font-weight: 700;
+  font-size: 37px;
+  line-height: 71px;
 }
