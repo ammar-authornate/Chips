@@ -7,7 +7,7 @@ padding-right: ${(props) => (props.pr ? props.pr : '20px')};
 background-color: ${(props) => (props.bg ? props.bg : 'transparent')};
 border-radius: ${(props) => (props.br ? props.br : '1px')};
 color: ${(props) => (props.color ? props.color : 'white')};
-width: ${(props) => (props.width ? props.width : '40%')};
+width: ${(props) => (props.width ? props.width : '100%')};
 height: ${(props) => (props.height ? props.height : '101px')};
 border: '1px solid #FFFFFF';
 `;

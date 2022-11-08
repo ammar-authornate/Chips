@@ -3,10 +3,12 @@ import { Button } from '../components/Button';
 import { Image } from '../components/Image';
 import { InputBox } from '../components/InputBox';
 import { H1, P } from '../components/Typography';
+import { BetModal } from '../components/Model';
 
 export default function Home() {
   const [coming, setComing] = useState(true);
   const [email, setEmail] = useState(false);
+  const [modalShown, setModalShown] = useState(false);
   const [input, setInput] = useState({
     password: '',
   });
@@ -15,10 +17,15 @@ export default function Home() {
     setInput(value);
     console.log(value);
   };
+  const openBetModal = (bet) => {
+    setModalShown(true);
+  };
 
   return (
     <div style={{ width: '100%', height: '100vh', display: 'flex' }}>
       <Image alt='Chips' src='/assets/Frame.png' width='813px' />
+
+      {modalShown && <BetModal onClose={() => setModalShown(false)} />}
 
       <div
         style={{
@@ -53,18 +60,33 @@ export default function Home() {
             >
               Web 3 / SPORTS / Social / Competition
             </P>
-            <div>
+            <div
+              style={{
+                textAlign: 'center',
+                justifyContent: 'center',
+                width: '100%',
+              }}
+            >
+              <InputBox
+                type='email'
+                placeholder='Enter email '
+                style={{ width: '60%' }}
+              />
               <div
                 style={{
+                  marginTop: '2rem',
                   display: 'flex',
-                  textAlign: 'center',
                   justifyContent: 'center',
                 }}
               >
-                <InputBox type='email' placeholder='Enter email ' />
+                <InputBox
+                  type='email'
+                  placeholder='Referal code '
+                  style={{ width: '40%' }}
+                />
                 <Button
                   onClick={() => {
-                    setComing(false);
+                    openBetModal();
                   }}
                 >
                   NOTIFY ME
@@ -75,8 +97,20 @@ export default function Home() {
         )}
 
         {coming && (
-          <div style={{ width: '100%', textAlign: 'center',marginBottom:'10rem' }}>
-            <H1 style={{ fontSize: '137px' ,color:'#ffffff',paddingBottom:'0px'}}>
+          <div
+            style={{
+              width: '100%',
+              textAlign: 'center',
+              marginBottom: '10rem',
+            }}
+          >
+            <H1
+              style={{
+                fontSize: '137px',
+                color: '#ffffff',
+                paddingBottom: '0px',
+              }}
+            >
               ENTER <br /> PASSWORD
             </H1>
 
@@ -86,7 +120,7 @@ export default function Home() {
                   display: 'flex',
                   textAlign: 'center',
                   justifyContent: 'center',
-                  marginTop:'6rem'
+                  marginTop: '6rem',
                 }}
               >
                 <InputBox
